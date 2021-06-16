@@ -79,7 +79,15 @@ void scene2()
 		glVertex2i(31,40);
 		glVertex2i(31,79);
 	glEnd();
+	glColor3f(0.0,0.0,0.0);
+	glBegin(GL_LINE_LOOP);
+		glVertex2i(35,79);
+		glVertex2i(35,40);
+		glVertex2i(31,40);
+		glVertex2i(31,79);
+	glEnd();
 	
+	//tower between
 	glColor3ub(146,146,146);
 	glBegin(GL_POLYGON);
 		glVertex2f(35.5,80.0);
@@ -94,6 +102,10 @@ void scene2()
 		glVertex2f(30.5,79.0);
 		glVertex2f(30.5,80.0);
 	glEnd();
+	
+	
+	
+	
 	
 	//tower mid part
 	glColor3ub(146,146,146);
@@ -110,6 +122,40 @@ void scene2()
 		glVertex2f(28.0,95.0);
 		glVertex2f(30.5,80.0);
 	glEnd();
+	
+	//mid part between
+	glColor3f(1.0,0.0,0.0);
+	glBegin(GL_POLYGON);
+		glVertex2f(37.5,95.0);
+		glVertex2f(37.5,97.0);
+		glVertex2f(28.0,97.0);
+		glVertex2f(28.0,95.0);
+	glEnd();
+	glColor3f(0.0,0.0,0.0);
+	glBegin(GL_LINE_LOOP);
+		glVertex2f(37.5,95.0);
+		glVertex2f(37.5,97.0);
+		glVertex2f(28.0,97.0);
+		glVertex2f(28.0,95.0);
+	glEnd();
+	
+	//mid part above between
+	glColor3ub(85,170,255);
+	glBegin(GL_POLYGON);
+		glVertex2f(35.0,98.5);
+		glVertex2f(37.5,97.0);
+		glVertex2f(28.0,97.0);
+		glVertex2f(31.0,98.5);
+	glEnd();
+	glColor3f(0.0,0.0,0.0);
+	glBegin(GL_LINE_LOOP);
+		glVertex2f(35.0,98.5);
+		glVertex2f(37.5,97.0);
+		glVertex2f(28.0,97.0);
+		glVertex2f(31.0,98.5);
+	glEnd();
+	
+	
 	
 		
 	//roof upper berth
@@ -145,6 +191,43 @@ void scene2()
 		glVertex2i(100,65);
 		glVertex2i(100,40);
 	glEnd();
+	
+	//window 1
+	glColor3f(0.0,0.0,0.0);
+	glBegin(GL_LINE_LOOP);
+		glVertex2i(52,41);
+		glVertex2i(52,64);
+		glVertex2i(60,64);
+		glVertex2i(60,41);
+	glEnd();
+	
+	//window 2
+	glColor3f(0.0,0.0,0.0);
+	glBegin(GL_LINE_LOOP);
+		glVertex2i(64,41);
+		glVertex2i(64,64);
+		glVertex2i(72,64);
+		glVertex2i(72,41);
+	glEnd();
+	
+	//window 3
+	glColor3f(0.0,0.0,0.0);
+	glBegin(GL_LINE_LOOP);
+		glVertex2i(76,41);
+		glVertex2i(76,64);
+		glVertex2i(84,64);
+		glVertex2i(84,41);
+	glEnd();
+	
+	//window 4
+	glColor3f(0.0,0.0,0.0);
+	glBegin(GL_LINE_LOOP);
+		glVertex2i(88,41);
+		glVertex2i(88,64);
+		glVertex2i(96,64);
+		glVertex2i(96,41);
+	glEnd();
+	
 	
 	//main left small
 	glColor3ub(85,170,255);
