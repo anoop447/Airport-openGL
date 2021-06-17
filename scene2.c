@@ -262,6 +262,8 @@ void scene2()
 		glVertex2i(100,65);
 	glEnd();
 	
+
+	
 	//road
 	glColor3f(0.0,0.0,0.0);
 	glBegin(GL_POLYGON);	
@@ -269,6 +271,48 @@ void scene2()
 		glVertex2i(0,40);
 		glVertex2i(150,40);
 		glVertex2i(150,0);
+	glEnd();
+	
+	
+	//aeroplane front circle
+	glColor3ub(85,170,255);
+	glPushMatrix();
+	//glRotatef(x,1,0,0);
+	glTranslatef(120,45,0);
+	glutSolidSphere(2.5,100,10);
+	
+	glPopMatrix();
+	glEnd();
+	
+	//aeroplane top wing
+	
+	glBegin(GL_POLYGON);
+		glColor3ub(85,170,255);	
+		glVertex2f(119.7,47.0);
+		glColor3f(0.0,0.0,0.0);
+		glVertex2i(120,56);
+		glColor3ub(85,170,255);
+		glVertex2f(120.3,47.0);	
+	glEnd();
+	
+	//aeroplane left wing
+	glBegin(GL_TRIANGLES);
+		glColor3ub(85,170,255);	
+		glVertex2f(119.0,44.0);
+		glColor3f(0.0,0.0,0.0);
+		glVertex2i(100,46);
+		glColor3ub(85,170,255);
+		glVertex2f(119.0,43.0);	
+	glEnd();
+	
+	//aeroplane right wing
+	glBegin(GL_TRIANGLES);
+		glColor3ub(85,170,255);	
+		glVertex2f(121.0,44.0);
+		glColor3f(0.0,0.0,0.0);
+		glVertex2i(140,46);
+		glColor3ub(85,170,255);
+		glVertex2f(121.0,43.0);	
 	glEnd();
 	
 	
