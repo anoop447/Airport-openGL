@@ -284,6 +284,34 @@ void scene2()
 	glPopMatrix();
 	glEnd();
 	
+	glColor3ub(131,131,131);
+	glBegin(GL_LINES);
+		glVertex2f(116.0,45.5);
+		glVertex2f(124.0,45.5);
+		
+		glVertex2f(117.85,46.5);
+		glVertex2f(122.0,46.5);
+		
+		glVertex2f(120.0,46.5);
+		glVertex2f(120.0,45.5);
+	glEnd();
+	
+	
+	
+	glColor3f(0.0,0.0,0.0);
+	glBegin(GL_POLYGON);
+		glVertex2f(119.0,41.5);
+		glVertex2f(121.0,41.5);
+		glVertex2f(121.0,40.0);
+		glVertex2f(119.0,40.0);
+	glEnd();
+	glColor3ub(131,131,131);
+	glLineWidth(3.0);
+	glBegin(GL_LINES);
+		glVertex2f(120.0,42.5);
+		glVertex2f(120.0,40.0);
+	glEnd();
+	
 	//aeroplane top wing
 	
 	glBegin(GL_POLYGON);
@@ -313,6 +341,55 @@ void scene2()
 		glVertex2i(140,46);
 		glColor3ub(85,170,255);
 		glVertex2f(121.0,43.0);	
+	glEnd();
+	
+	//aeroplane left small wing
+	glBegin(GL_TRIANGLES);
+		glColor3ub(85,170,255);	
+		glVertex2f(118.0,45.0);
+		glColor3f(0.0,0.0,0.0);
+		glVertex2f(113.0,46.5);
+		glColor3ub(85,170,255);
+		glVertex2f(118.0,46.0);	
+	glEnd();
+	
+	//aeroplane right small wing
+	glBegin(GL_TRIANGLES);
+		glColor3ub(85,170,255);	
+		glVertex2f(122.0,45.0);
+		glColor3f(0.0,0.0,0.0);
+		glVertex2f(127.0,46.5);
+		glColor3ub(85,170,255);
+		glVertex2f(122.0,46.0);	
+	glEnd();
+	
+	
+	//aeroplane left turbine
+	glColor3ub(85,170,255);
+	glPushMatrix();
+	glTranslatef(115,42,0);
+	glutSolidSphere(1,100,10);
+	glPopMatrix();
+	glEnd();
+	glColor3ub(0,0,0);
+	glPushMatrix();
+	glTranslatef(115,42,0);
+	glutSolidSphere(0.4,100,10);
+	glPopMatrix();
+	glEnd();
+	
+	//aeroplane right turbine
+	glColor3ub(85,170,255);
+	glPushMatrix();
+	glTranslatef(125,42,0);
+	glutSolidSphere(1,100,10);
+	glPopMatrix();
+	glEnd();
+	glColor3ub(0,0,0);
+	glPushMatrix();
+	glTranslatef(125,42,0);
+	glutSolidSphere(0.4,100,10);
+	glPopMatrix();
 	glEnd();
 	
 	
