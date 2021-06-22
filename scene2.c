@@ -155,6 +155,44 @@ void scene2()
 		glVertex2f(31.0,98.5);
 	glEnd();
 	
+	//tower top sphere
+	glColor3ub(74,74,74);
+	glPushMatrix();
+	glTranslatef(33,103,0);
+	glutSolidSphere(2.8,100,10);
+	glPopMatrix();
+	glEnd();
+	//tower top part
+	glColor3ub(146,146,146);
+	glBegin(GL_POLYGON);
+		glVertex2f(35.0,98.5);
+		glVertex2f(36.0,102.5);
+		glVertex2f(30.0,102.5);
+		glVertex2f(31.0,98.5);
+	glEnd();
+	glColor3f(0.0,0.0,0.0);
+	glBegin(GL_LINE_LOOP);
+		glVertex2f(35.0,98.5);
+		glVertex2f(36.0,102.5);
+		glVertex2f(30.0,102.5);
+		glVertex2f(31.0,98.5);
+	glEnd();
+	
+	//tower antena
+	glColor3f(0.0,0.0,0.0);
+	glBegin(GL_LINES);
+		glVertex2i(33,106);
+		glVertex2i(33,116);
+	glEnd();
+	glColor3ub(74,74,74);
+	glPushMatrix();
+	glTranslatef(33,116.5,0);
+	glutSolidSphere(0.7,100,10);
+	glPopMatrix();
+	glEnd();
+	
+	
+	
 	
 	
 		
@@ -284,7 +322,7 @@ void scene2()
 	glPopMatrix();
 	glEnd();
 	
-	glColor3ub(131,131,131);
+	glColor3ub(85,85,85);
 	glBegin(GL_LINES);
 		glVertex2f(116.0,45.5);
 		glVertex2f(124.0,45.5);
@@ -308,6 +346,7 @@ void scene2()
 	glColor3ub(131,131,131);
 	glLineWidth(3.0);
 	glBegin(GL_LINES);
+	
 		glVertex2f(120.0,42.5);
 		glVertex2f(120.0,40.0);
 	glEnd();
@@ -342,6 +381,7 @@ void scene2()
 		glColor3ub(85,170,255);
 		glVertex2f(121.0,43.0);	
 	glEnd();
+	
 	
 	//aeroplane left small wing
 	glBegin(GL_TRIANGLES);
@@ -391,6 +431,8 @@ void scene2()
 	glutSolidSphere(0.4,100,10);
 	glPopMatrix();
 	glEnd();
+	
+	
 	
 	
 	
