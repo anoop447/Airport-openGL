@@ -231,16 +231,29 @@ void scene2()
 	glEnd();
 	
 	//window 1
-	glColor3f(0.0,0.0,0.0);
+	glPushMatrix();
+	glColor3f(1.0,1.0,1.0);
+	//glLineWidth(3.0);
 	glBegin(GL_LINE_LOOP);
 		glVertex2i(52,41);
 		glVertex2i(52,64);
 		glVertex2i(60,64);
-		glVertex2i(60,41);
+		glVertex2i(60,41);	
+	glEnd();
+	glPopMatrix();
+	
+	glBegin(GL_LINES);
+		glVertex2i(56,41);
+		glVertex2i(56,64);
+		glVertex2i(52,57);
+		glVertex2i(60,57);
+		glVertex2i(52,49);
+		glVertex2i(60,49);
 	glEnd();
 	
+	
 	//window 2
-	glColor3f(0.0,0.0,0.0);
+	glColor3f(1.0,1.0,1.0);
 	glBegin(GL_LINE_LOOP);
 		glVertex2i(64,41);
 		glVertex2i(64,64);
@@ -248,8 +261,17 @@ void scene2()
 		glVertex2i(72,41);
 	glEnd();
 	
+	glBegin(GL_LINES);
+		glVertex2i(68,41);
+		glVertex2i(68,64);
+		glVertex2i(64,57);
+		glVertex2i(72,57);
+		glVertex2i(64,49);
+		glVertex2i(72,49);
+	glEnd();
+	
 	//window 3
-	glColor3f(0.0,0.0,0.0);
+	glColor3f(1.0,1.0,1.0);
 	glBegin(GL_LINE_LOOP);
 		glVertex2i(76,41);
 		glVertex2i(76,64);
@@ -257,13 +279,31 @@ void scene2()
 		glVertex2i(84,41);
 	glEnd();
 	
+	glBegin(GL_LINES);
+		glVertex2i(80,41);
+		glVertex2i(80,64);
+		glVertex2i(76,57);
+		glVertex2i(84,57);
+		glVertex2i(76,49);
+		glVertex2i(84,49);
+	glEnd();
+	
 	//window 4
-	glColor3f(0.0,0.0,0.0);
+	glColor3f(1.0,1.0,1.0);
 	glBegin(GL_LINE_LOOP);
 		glVertex2i(88,41);
 		glVertex2i(88,64);
 		glVertex2i(96,64);
 		glVertex2i(96,41);
+	glEnd();
+	
+	glBegin(GL_LINES);
+		glVertex2i(92,41);
+		glVertex2i(92,64);
+		glVertex2i(88,57);
+		glVertex2i(96,57);
+		glVertex2i(88,49);
+		glVertex2i(96,49);
 	glEnd();
 	
 	
@@ -431,9 +471,6 @@ void scene2()
 	glutSolidSphere(0.4,100,10);
 	glPopMatrix();
 	glEnd();
-	
-	
-	
 	
 	
 	
