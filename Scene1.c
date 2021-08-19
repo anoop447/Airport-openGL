@@ -346,6 +346,25 @@ void pool(float x,float y,float r)
 	glutSolidSphere(r,10,10);
 	
 }
+void grass(float a,float b,float c,float d,float e)
+{
+	glBegin(GL_POLYGON);
+	glColor3f(0,0.5,0);
+		glVertex2f(a,b);
+		glColor3f(0,1,0.2);
+		glVertex2f(c,b);
+		glColor3f(0,1,0.2);
+		glVertex2f(d,e);
+	glEnd();
+}
+void output(char s[])
+{
+	int t;
+	for(t=0;t<strlen(s);t++)
+	{
+		glutStrokeCharacter(GLUT_STROKE_MONO_ROMAN,s[t]);
+	}
+}
 void display()
 {
 	glClear(GL_COLOR_BUFFER_BIT);
@@ -671,6 +690,19 @@ void display()
 		glVertex2f(24.5,55);
 	glEnd();
 	glPopMatrix();
+    //grass
+    grass(120,40,122,122,50);
+    grass(120,40,122,120,50);
+    grass(120,40,122,124,50);
+    grass(128,50,130,129,60);
+    grass(128,50,130,127,60);
+    grass(128,50,130,131,60);
+    grass(110,50,112,112,60);
+    grass(110,50,112,110,60);
+    grass(110,50,112,114,60);
+    grass(4,40,6,6,50);
+    grass(4,40,6,4,50);
+    grass(4,40,6,8,50);
 	glColor3f(0.0,0.5,0.0);
 	glPushMatrix();
 	sun(21,71,4);
@@ -808,7 +840,10 @@ void display()
 		star2();
 	}
 	 //top bulb 
+	if(int(m)%2==0)
 	glColor3f(1.0,1.0,0.0);
+	else
+	glColor3f(1.0,1.0,0.5);
 	glPushMatrix();
 	bulb1(97,52);
 	glPopMatrix();
@@ -823,7 +858,10 @@ void display()
 	glPopMatrix();
 	//side bulb
 	glPushMatrix();
+	if(int(m)%2==0)
 	glColor3f(1.0,1.0,0.5);
+	else
+	glColor3f(1.0,1.0,0.0);
 	bulb2(12.4,49);
 	glPopMatrix();
 	glPushMatrix();
@@ -868,7 +906,23 @@ void display()
     car(); 
     //bus
     bus();
-
+    //text
+	glColor3f(1,1,1);
+	if(m>160)
+	{ 
+		if(int(m)%2==0)
+		glColor3f(1,1,0);
+		else
+		glColor3f(1,0.0,0.0);
+	}
+	//glRasterPos2i(100,180);
+	glutBitmapCharacter(GLUT_BITMAP_8_BY_13,'A');
+	char buff[30]="International Airport";
+	glPushMatrix();
+	glTranslatef(15,102,0);
+	glScalef(0.05,0.05,0.0);
+	output(buff);
+	glPopMatrix();
 	glFlush();
 }
 
